@@ -2,6 +2,7 @@ import * as helpers from './utils/helpers';
 
 import SBadge from 'components/atoms/badge.vue';
 import SAlert from 'components/atoms/alert.vue';
+import SIcon from 'components/atoms/icon.vue';
 
 // import SButton from 'components/button.vue';
 // import SSpinner from 'components/spinner.vue';
@@ -12,7 +13,8 @@ const version = '0.1.0';
 
 const components = {
   SBadge,
-  SAlert
+  SAlert,
+  SIcon
   //, SButton, SSpinner, SProgressBar, SInput
 };
 

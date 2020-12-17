@@ -8,18 +8,23 @@
         v-if="dismissable",
         @click.prevent="$emit('dismiss', $event)"
       ).s-alert__dismiss
-        i.eva.eva-close-outline
+        s-icon(name="close")
 
 </template>
 
 <script lang="ts">
 import { COLORS_NAMES } from 'utils/constants';
+import SIcon from './icon.vue';
 
 const COLORS_TO_IGNORE = [COLORS_NAMES.WHITE, COLORS_NAMES.SOFT_GREY, COLORS_NAMES.GREY];
 const FILTERED_COLORS_NAMES = Object.values(COLORS_NAMES).filter((name) => !COLORS_TO_IGNORE.some((n) => n === name));
 
 export default {
   name: 'SAlert',
+
+  components: {
+    SIcon
+  },
 
   props: {
     color: {
@@ -40,7 +45,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import 'eva-icons/style/eva-icons.css';
 @import 'styles/transitions';
 @import 'styles/typography';
@@ -73,7 +78,6 @@ export default {
   }
 
   &__dismiss {
-    transition: $transition-standard-linear;
     position: absolute;
     top: 0;
     right: 0;
@@ -82,8 +86,14 @@ export default {
     color: $c-grey-dark;
     cursor: pointer;
 
+    .eva {
+      transition: $transition-standard-linear;
+    }
+
     &:hover {
-      color: lighten($c-grey-dark, 20%);
+      .eva {
+        color: lighten($c-grey-dark, 20%) !important;
+      }
     }
   }
 

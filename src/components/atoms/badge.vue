@@ -1,7 +1,6 @@
-<template>
-  <span :class="[`s-badge s-badge--${color}`, { 's-badge--disabled': disabled }, `s-badge--${size}`]">
-    <slot>Badge</slot>
-  </span>
+<template lang="pug">
+  span(:class="[`s-badge s-badge--${color}`, { 's-badge--disabled': disabled }, `s-badge--${size}`]")
+    slot Badge
 </template>
 
 <script lang="ts">

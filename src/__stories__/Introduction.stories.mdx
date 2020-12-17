@@ -1,0 +1,105 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+import SeedLogo from './assets/images/seed-logo.png';
+import VueLogo from './assets/images/vue-logo.png';
+
+<Meta title='Introduction' />
+
+<style>{`
+  :root {
+    --c-primary: #35495e;
+    --c-secondary: #41b883;
+    --c-dark: #666;
+
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.35;
+  }
+
+  header {
+    height: calc(100vh - 132px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 278px;
+  }
+
+  .logos {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    height: 100px;
+    position: relative;
+  }
+
+  .logos__seed, .logos__vue {
+    position: absolute;
+  }
+
+  .logos__seed {
+    top: -60px;
+    z-index: 1;
+  }
+
+  .logos__vue {
+    top: 0;
+    z-index: 2;
+  }
+
+  .logos__seed > img, .logos__vue > img {
+    max-width: 96px;
+  }
+
+  .seed-vue__title {
+    text-align: center;
+    color: var(--c-primary);
+    margin: 0 0 32px;
+    font-size: 2.5rem;
+  }
+
+  .seed-vue__subtitle {
+    color: var(--c-secondary);
+    border: 0;
+    margin: 0 0 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .seed-vue__intro {
+    color: var(--c-dark);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .seed-vue__copyright {
+    color: var(--c-dark);
+    text-align: center;
+  }
+`}</style>
+
+<header>
+  <div class='logos'>
+    <div class='logos__seed'>
+      <img src={SeedLogo} alt='Seed' />
+    </div>
+    <div class='logos__vue'>
+      <img src={VueLogo} alt='Vue.js' />
+    </div>
+  </div>
+  <h1 class='seed-vue__title'>SEED-VUE</h1>
+  <h2 class='seed-vue__subtitle'>
+    Lightweight Vue 2 based component library
+    <br />
+    for beautiful and responsive apps
+  </h2>
+  <p class='seed-vue__intro'>It's free, open-source, light-weight and responsive</p>
+  <p class='seed-vue__copyright'>
+    Made with 💚 in Tokyo. <br />
+    &copy; 2020. Rogerio Taques
+  </p>
+</header>

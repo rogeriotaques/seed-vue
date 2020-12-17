@@ -1,0 +1,153 @@
+import { Meta, Story, /*Canvas,*/ ArgsTable } from '@storybook/addon-docs/blocks';
+import SBadge from 'components/atoms/badge';
+
+<Meta title='Atoms/Badge' component={SBadge} />
+
+<style>{`
+    .a-badge-container {
+      display: flex;
+      width: 100%;
+    }
+   .a-badge-wrapper {
+     display: inline-block;
+     text-align: center;
+     vertical-align: middle;
+     margin: 0 4px;
+     flex: auto;
+   }
+   .a-badge-wrapper > code {
+     display: block;
+     margin-top: 8px;
+   }
+`}</style>
+
+export const All = () => ({
+  components: { SBadge },
+  template: `
+    <div class="a-badge-container">
+      <div class="a-badge-wrapper">
+        <s-badge color="primary">10</s-badge>
+        <code>primary</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="secondary">10</s-badge>
+        <code>secondary</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="red">10</s-badge>
+        <code>red</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="orange">10</s-badge>
+        <code>orange</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="green">10</s-badge>
+        <code>green</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="blue">10</s-badge>
+        <code>blue</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="purple">10</s-badge>
+        <code>purple</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="white">10</s-badge>
+        <code>white</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="grey-light">10</s-badge>
+        <code>grey-light</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="grey">10</s-badge>
+        <code>grey</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="grey-dark">10</s-badge>
+        <code>grey-dark</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="black">10</s-badge>
+        <code>black</code>
+      </div>
+    </div>
+  `
+});
+
+## Atoms / Badges
+
+A small count and labeling component.
+
+<br />
+
+<Story name='All'>{All.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-badge color="primary"> ... </s-badge>
+```
+
+<ArgsTable of={SBadge} />
+
+## Stories
+
+### Sizes
+
+export const Sizes = () => ({
+  components: { SBadge },
+  template: `
+    <div>
+      <div class="a-badge-wrapper">
+        <s-badge size="mini">10</s-badge>
+        <code>mini</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge size="default">10</s-badge>
+        <code>default</code>
+      </div>
+      <div class="a-badge-wrapper">
+        <s-badge size="large">10</s-badge>
+        <code>large</code>
+      </div>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Sizes'>{Sizes.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-badge ... size="mini"> ... </s-badge>
+```
+
+### Disabled
+
+export const Disabled = () => ({
+  components: { SBadge },
+  template: `<s-badge color="primary" disabled>10</s-badge>`
+});
+
+<br />
+
+<Story name='Disabled'>{Disabled.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-badge ... disabled> ... </s-badge>
+```

@@ -1,6 +1,4 @@
-// ~~~~~~~~~~~~~~~~~~~~~~
-// Spacing mixins
-// ~~~~~~~~~~~~~~~~~~~~~~
+// ~~ SPACING ~~
 
 @function gutter($value) {
   @if type-of($value) == number {

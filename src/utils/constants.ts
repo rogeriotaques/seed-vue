@@ -6,7 +6,7 @@ export enum COLORS_NAMES {
   GREEN = 'green',
   BLUE = 'blue',
   PURPLE = 'purple',
-  DARK = 'grey',
+  GREY = 'grey',
   DARK_GREY = 'grey-dark',
   SOFT_GREY = 'grey-light',
   WHITE = 'white',

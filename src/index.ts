@@ -1,8 +1,8 @@
 import * as helpers from './utils/helpers';
 
 import SBadge from 'components/atoms/badge.vue';
+import SAlert from 'components/atoms/alert.vue';
 
-// import SAlert from 'components/alert.vue';
 // import SButton from 'components/button.vue';
 // import SSpinner from 'components/spinner.vue';
 // import SProgressBar from 'components/progress-bar.vue';
@@ -10,7 +10,11 @@ import SBadge from 'components/atoms/badge.vue';
 
 const version = '0.1.0';
 
-const components = { SBadge /*, SAlert, SButton, SSpinner, SProgressBar, SInput */ };
+const components = {
+  SBadge,
+  SAlert
+  //, SButton, SSpinner, SProgressBar, SInput
+};
 
 const install: any = (Vue: any, config = {}): void => {
   if (install.installed) {

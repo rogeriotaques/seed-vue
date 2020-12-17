@@ -1,0 +1,138 @@
+import { Meta, Story, /*Canvas,*/ ArgsTable } from '@storybook/addon-docs/blocks';
+import SAlert from 'components/atoms/alert';
+
+<Meta title='Atoms/Alert' component={SAlert} />
+
+<style>{`
+   .a-alert-wrapper {
+     display: block;
+     margin-bottom: 8px;
+   }
+   .a-alert-wrapper > code {
+     display: block;
+     margin-top: 8px;
+     padding: 0 8px;
+   }
+`}</style>
+
+export const All = () => ({
+  components: { SAlert },
+  template: `
+    <div>
+      <s-alert color="primary">A primary alert box.</s-alert>
+      <s-alert color="secondary">A secondary alert box.</s-alert>
+      <s-alert color="red">A red alert box.</s-alert>
+      <s-alert color="orange">A orange alert box.</s-alert>
+      <s-alert color="green">A green alert box.</s-alert>
+      <s-alert color="blue">A blue alert box.</s-alert>
+      <s-alert color="purple">A purple alert box.</s-alert>
+      <s-alert color="grey-dark">A grey-dark alert box.</s-alert>
+      <s-alert color="black">A black alert box.</s-alert>
+    </div>
+  `
+});
+
+## Atoms / Alerts
+
+Contextual feedback messages for user actions.
+
+<br />
+
+<Story name='All'>{All.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-alert color="primary"> ... </s-alert>
+```
+
+<ArgsTable of={SAlert} />
+
+## Stories
+
+### With title
+
+Alert boxes can also contain `titles`.
+
+export const WithTitle = () => ({
+  components: { SAlert },
+  template: `
+    <div >
+      <s-alert color="primary" title="A nice alert with title!">
+        Any supported color can be used.
+      </s-alert>
+      <s-alert color="grey-dark" title="A nice alert with title!">
+        But this is when using grey-dark.
+      </s-alert>
+      <s-alert color="black" title="A nice alert with title!">
+        And this when using black.
+      </s-alert>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='With title'>{WithTitle.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-alert ... title="The title here">The body message here.</s-alert>
+```
+
+### Dismissable
+
+When `dismissable` is given, the alert box will display a `close` button which will emit the `dismiss` event when clicked.
+
+export const Dismissable = () => ({
+  components: { SAlert },
+  template: `
+    <div >
+      <s-alert
+        v-if="alert1"
+        color="primary"
+        dismissable
+        @dismiss="alert1 = false"
+      >
+        A dismissable alert box
+      </s-alert>
+      <s-alert
+        v-if="alert2"
+        color="primary"
+        title="A dismissable alert box"
+        dismissable
+        @dismiss="alert2 = false"
+      >
+        That also contain a title.
+      </s-alert>
+      <p >
+        <a v-if="!alert1 || !alert2" href="#" @click.prevent="alert1 = alert2 = true" >Click here to show the alerts again.</a>
+      </p>
+    </div>
+  `,
+  data() {
+    return {
+      alert1: true,
+      alert2: true
+    };
+  }
+});
+
+<br />
+
+<Story name='Dismissable'>{Dismissable.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-alert v-if="isOpen" dismissable @dismiss="isOpen = false"> ... </s-alert>
+```

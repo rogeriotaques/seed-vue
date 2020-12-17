@@ -1,0 +1,10 @@
+{
+  "singleQuote": true,
+  "arrowParens": "always",
+  "disableLanguages": [
+    "markdown"
+  ],
+  "printWidth": 150,
+  "jsxSingleQuote": true,
+  "trailingComma": "none"
+}

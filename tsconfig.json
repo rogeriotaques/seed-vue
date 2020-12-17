@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+      "components/*": [
+        "./src/components/*"
+      ],
+      "utils/*": [
+        "./src/utils/*"
+      ],
+      "styles/*": [
+        "./src/styles/*"
+      ],
+    },
+    "rootDirs": [
+      "./"
+    ],
+    "lib": [],
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "./src/**/*.js",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "shims.d.ts",
+    "types.d.ts"
+  ]
+}

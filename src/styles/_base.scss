@@ -1,0 +1,98 @@
+@import './colors';
+@import './typography';
+@import './mixins';
+
+:root {
+  --c-primary: #{$c-primary};
+  --c-secondary: #{$c-secondary};
+  --c-grey: #{$c-grey};
+  --c-grey-light: #{$c-grey-light};
+  --c-grey-dark: #{$c-grey-dark};
+  --c-red: #{$c-red};
+  --c-orange: #{$c-orange};
+  --c-green: #{$c-green};
+  --c-blue: #{$c-blue};
+  --c-purple: #{$c-purple};
+  --c-black: #{$c-black};
+  --c-white: #{$c-white};
+
+  --t-family: #{$t-family};
+  --t-family-heading: #{$t-family-heading};
+  --t-font-size: #{$t-font-size};
+  --t-font-weight: #{$t-font-weight};
+  --t-font-weight-heading: #{$t-font-weight-heading};
+  --t-line-height: #{$t-line-height};
+  --t-letter-spacing: #{$t-letter-spacing};
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: $c-black;
+  text-rendering: optimizeLegibility;
+  font-kerning: auto;
+  font-weight: var(--t-font-weight);
+  font-family: var(--t-family);
+  font-size: var(--t-font-size);
+  line-height: var(--t-line-height);
+  letter-spacing: var(--t-letter-spacing);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include margin(1, 0, 2);
+  font-family: var(--t-family-heading);
+  font-weight: var(--t-font-weight-heading);
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 2.9rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 2.7rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 2.3rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+p {
+  line-height: 1;
+  margin: 8px 16px;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+a,
+a:visited,
+a:active {
+  color: var(--c-primary);
+}

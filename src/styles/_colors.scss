@@ -1,0 +1,32 @@
+// ~~ MAPS ~~
+
+$colors: (
+  'primary': #3273dc,
+  'secondary': #01d1b2,
+  'grey': #c2c2c2,
+  'grey-light': #f2f2f2,
+  'grey-dark': #666,
+  'red': #da3e3e,
+  'orange': #f7a036,
+  'green': #65e06b,
+  'blue': #209cee,
+  'purple': #d13dfa,
+  'black': #333,
+  'white': #ffffff
+);
+
+// ~~ COLORS ~~
+
+$c-primary: map-get($colors, 'primary');
+$c-secondary: map-get($colors, 'secondary');
+$c-grey: map-get($colors, 'grey');
+$c-grey-light: map-get($colors, 'grey-light');
+$c-grey-dark: map-get($colors, 'grey-dark');
+$c-red: map-get($colors, 'red');
+$c-orange: map-get($colors, 'orange');
+$c-green: map-get($colors, 'green');
+$c-blue: map-get($colors, 'blue');
+$c-purple: map-get($colors, 'purple');
+$c-black: map-get($colors, 'black');
+$c-white: map-get($colors, 'white');
+$c-shadow: rgba(0, 0, 0, 0.4);

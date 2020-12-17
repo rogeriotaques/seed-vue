@@ -1,0 +1,9 @@
+@import './colors';
+
+// ~~ SHADOWS ~~
+
+$shadow-short: $c-shadow 0 0 3px;
+$shadow-default: $c-shadow 0 3px 6px;
+$shadow-large: $c-shadow 0 3px 12px;
+$shadow-inset: lighten($c-shadow, 10) 0 3px 6px inset;
+$shadow-text: white 0 1px 1px;

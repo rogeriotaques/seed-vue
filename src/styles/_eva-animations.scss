@@ -18,7 +18,7 @@
 }
 
 .eva-icon-zoom {
-  animation-name: eva-zoomIn;
+  animation-name: seedVue-zoomOut;
 }
 
 .eva-icon-pulse {
@@ -41,7 +41,7 @@
     }
 
     .eva-icon-hover-zoom {
-      animation-name: eva-zoomIn;
+      animation-name: seedVue-zoomOut;
     }
 
     .eva-icon-hover-pulse {
@@ -124,5 +124,16 @@
 
   50% {
     opacity: 1;
+  }
+}
+
+@keyframes seedVue-zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale3d(0.5, 0.5, 0.5);
   }
 }

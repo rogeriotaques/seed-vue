@@ -1,7 +1,8 @@
 import * as helpers from './utils/helpers';
 
-import SBadge from 'components/atoms/badge.vue';
 import SAlert from 'components/atoms/alert.vue';
+import SBadge from 'components/atoms/badge.vue';
+import SDot from 'components/atoms/dot.vue';
 import SIcon from 'components/atoms/icon.vue';
 
 // import SButton from 'components/button.vue';
@@ -12,8 +13,9 @@ import SIcon from 'components/atoms/icon.vue';
 const version = '0.1.0';
 
 const components = {
-  SBadge,
   SAlert,
+  SBadge,
+  SDot,
   SIcon
   //, SButton, SSpinner, SProgressBar, SInput
 };

@@ -1,0 +1,134 @@
+import { Meta, Story, /*Canvas,*/ ArgsTable } from '@storybook/addon-docs/blocks';
+import SDot from 'components/atoms/dot';
+
+<Meta title='Atoms/Dot' component={SDot} />
+
+<style>{`
+    .a-dot-container {
+      display: flex;
+      width: 100%;
+    }
+   .a-dot-wrapper {
+     display: inline-block;
+     text-align: center;
+     vertical-align: middle;
+     margin: 0 4px;
+     flex: auto;
+   }
+   .a-dot-wrapper > code {
+     display: block;
+     margin-top: 8px;
+   }
+`}</style>
+
+export const All = () => ({
+  components: { SDot },
+  template: `
+    <div class="a-dot-container">
+      <div class="a-dot-wrapper">
+        <s-dot color="primary" />
+        <code>primary</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="secondary" />
+        <code>secondary</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="red" />
+        <code>red</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="orange" />
+        <code>orange</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="green" />
+        <code>green</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="blue" />
+        <code>blue</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="purple" />
+        <code>purple</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="grey-light" />
+        <code>grey-light</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="grey" />
+        <code>grey</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="grey-dark" />
+        <code>grey-dark</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot color="black" />
+        <code>black</code>
+      </div>
+      <div class="a-dot-wrapper" style="background: #333; color: white;">
+        <s-dot color="white" />
+        <code>white</code>
+      </div>
+    </div>
+  `
+});
+
+## Atoms / Dots
+
+A simple notification element to be used alongside buttons or icons when a especial attention is needed.
+
+<br />
+
+<Story name='All'>{All.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-dot color="primary" />
+```
+
+<ArgsTable of={SDot} />
+
+## Stories
+
+### Sizes
+
+export const Sizes = () => ({
+  components: { SDot },
+  template: `
+    <div>
+      <div class="a-dot-wrapper">
+        <s-dot size="mini" color="red" />
+        <code>mini</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot size="default" color="red" />
+        <code>default</code>
+      </div>
+      <div class="a-dot-wrapper">
+        <s-dot size="large" color="red" />
+        <code>large</code>
+      </div>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Sizes'>{Sizes.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-dot ... size="mini" />
+```

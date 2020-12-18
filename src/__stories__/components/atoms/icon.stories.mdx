@@ -65,6 +65,8 @@ A set of over 480 [Eva Icons](https://akveo.github.io/eva-icons) (244 outlined a
 
 ### Available icons
 
+A list of all the available icons can be seen at [Eva Icons](https://akveo.github.io/eva-icons) official page.
+
 ### Colors
 
 Icons get colored when `color` is given with one of the following options.
@@ -141,7 +143,135 @@ export const Colors = () => ({
 
 ### Sizes
 
+Up to 5 sizes are supported by natively.
+
+<br />
+
+export const Sizes = () => ({
+  components: { SIcon },
+  template: `
+    <div class="a-icon-container">
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="default" fill />
+        <code>default</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="2" fill />
+        <code>2x</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="3" fill />
+        <code>3x</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="4" fill />
+        <code>4x</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="5" fill />
+        <code>5x</code>
+      </div>
+    </div>
+  `
+});
+
+<Story name='Sizes'>{Sizes.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-icon name="..." size="3" />
+<!-- OR -->
+<s-icon name="..." size="3x" />
+```
+
 ### Animations
+
+There are 4 different animations supported combined with 2 styles.
+
+Animations can be triggered on `hover` (default) as below:
+
+<br />
+
+export const AnimationOnHover = () => ({
+  components: { SIcon },
+  template: `
+    <div class="a-icon-container">
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="3" fill animation="zoom" />
+        <code>zoom</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="3" fill animation="pulse" />
+        <code>pulse</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="3" fill animation="shake" />
+        <code>shake</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="3" fill animation="flip" />
+        <code>flip</code>
+      </div>
+    </div>
+  `
+});
+
+<Story name='Animation on hover'>{AnimationOnHover.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-icon name="..." animation="shake" />
+```
+
+Or can be set to keep indefinitely in a loop, like below:
+
+<br />
+
+export const AnimationInfinite = () => ({
+  components: { SIcon },
+  template: `
+    <div class="a-icon-container">
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="3" fill animation="zoom" infinite />
+        <code>zoom</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="3" fill animation="pulse" infinite />
+        <code>pulse</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="3" fill animation="shake" infinite />
+        <code>shake</code>
+      </div>
+      <div class="a-icon-wrapper">
+        <s-icon name="github" size="3" fill animation="flip" infinite />
+        <code>flip</code>
+      </div>
+    </div>
+  `
+});
+
+<Story name='Animation infinite'>{AnimationInfinite.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-icon name="..." animation="shake" infinite />
+```
 
 <!--
 export const Sizes = () => ({

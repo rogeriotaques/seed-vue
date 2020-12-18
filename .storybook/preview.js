@@ -2,6 +2,7 @@
 // import '../path/to/file.css'
 
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport';
+import seedVueTheme from './seedVueTheme.js';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -10,5 +11,9 @@ export const parameters = {
     viewports: MINIMAL_VIEWPORTS
   },
 
-  layout: 'centered'
+  layout: 'centered',
+
+  docs: {
+    theme: seedVueTheme
+  }
 };

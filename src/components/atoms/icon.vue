@@ -35,7 +35,7 @@ export default {
     },
 
     size: {
-      validator: (val) => 'default' || ['2', '3', '4', '5'].includes(val),
+      validator: (val) => 'default' || ['2', '3', '4', '5', '2x', '3x', '4x', '5x'].includes(val),
       default: 'default'
     },
 
@@ -68,7 +68,7 @@ export default {
         return null;
       }
 
-      return `eva-${this.size}x`;
+      return `eva-${this.size.replace('x', '')}x`;
     }
   }
 };

@@ -35,7 +35,6 @@ export default {
 @import 'styles/mixins';
 
 .s-badge {
-  // @extend .base-typography;
   @include padding(1);
   @include margin(0, 0.5, 0.5);
   border: 0;

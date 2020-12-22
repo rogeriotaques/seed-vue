@@ -1,0 +1,213 @@
+import { Meta, Story, /*Canvas,*/ ArgsTable } from '@storybook/addon-docs/blocks';
+import SSpinner from 'components/atoms/spinner';
+
+<Meta title='Components/Spinner' component={SSpinner} />
+
+<style>{`
+    .a-spinner-container {
+      display: flex;
+      width: 100%;
+    }
+   .a-spinner-wrapper {
+     display: inline-block;
+     text-align: center;
+     vertical-align: middle;
+     margin: 0 4px;
+     flex: auto;
+   }
+   .a-spinner-wrapper > code {
+     display: block;
+     margin-top: 8px;
+   }
+`}</style>
+
+export const All = () => ({
+  components: { SSpinner },
+  template: `
+    <div class="a-spinner-container">
+      <div class="a-spinner-wrapper">
+        <s-spinner color="primary" />
+        <code>primary</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="secondary" />
+        <code>secondary</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="red" />
+        <code>red</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="orange" />
+        <code>orange</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="green" />
+        <code>green</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="blue" />
+        <code>blue</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="purple" />
+        <code>purple</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="grey-light" />
+        <code>grey-light</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="grey" />
+        <code>grey</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="grey-dark" />
+        <code>grey-dark</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner color="black" />
+        <code>black</code>
+      </div>
+      <div class="a-spinner-wrapper" style="background: #333; color: white;">
+        <s-spinner color="white" />
+        <code>white</code>
+      </div>
+    </div>
+  `
+});
+
+## Spinners
+
+Indicate the loading state of a component or page. The following colors are supported:
+
+<br />
+
+<Story name='All'>{All.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-spinner color="primary" />
+```
+
+<ArgsTable of={SSpinner} />
+
+## Stories
+
+<br />
+
+### Sizes
+
+The size can be modified with the `size` property. Supported sizes are:
+
+export const Sizes = () => ({
+  components: { SSpinner },
+  template: `
+    <div>
+      <div class="a-spinner-wrapper">
+        <s-spinner size="mini" color="red" />
+        <code>mini</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner size="default" color="red" />
+        <code>default</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner size="large" color="red" />
+        <code>large</code>
+      </div>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Sizes'>{Sizes.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-spinner ... size="mini" />
+```
+
+### Speed
+
+The speed can be modified with the `speed` property. Supported sizes are:
+
+export const Speed = () => ({
+  components: { SSpinner },
+  template: `
+    <div>
+      <div class="a-spinner-wrapper">
+        <s-spinner speed="default" />
+        <code>default</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner speed="fast" />
+        <code>fast</code>
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner speed="furious" />
+        <code>furious</code>
+      </div>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Speed'>{Speed.bind({})}</Story>
+
+<br />
+
+The animation duration for each speed is as follows:
+
+- Default: `1.3s`
+- Fast: `0.85s`
+- Furious: `0.5s`
+
+##### Usage:
+
+```html
+<s-spinner ... speed="fast" />
+```
+
+### With text
+
+A text can be append with the `text` property.
+
+export const Text = () => ({
+  components: { SSpinner },
+  template: `
+    <div>
+      <div class="a-spinner-wrapper">
+        <s-spinner text="Loading ..." />
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner text="Wait a second ..." />
+      </div>
+      <div class="a-spinner-wrapper">
+        <s-spinner text="Working our magic. Hold on ..." />
+      </div>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Text'>{Text.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-spinner ... text="Foo" />
+```

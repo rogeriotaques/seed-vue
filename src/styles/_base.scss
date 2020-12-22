@@ -82,8 +82,8 @@ h6 {
 }
 
 p {
+  @include margin(1, 2);
   line-height: 1;
-  margin: 8px 16px;
 }
 
 b,

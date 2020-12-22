@@ -81,6 +81,8 @@ export const All = () => ({
 
 A simple notification element to be used alongside buttons or icons when a especial attention is needed.
 
+The following colors are supported:
+
 <br />
 
 <Story name='All'>{All.bind({})}</Story>
@@ -99,7 +101,11 @@ A simple notification element to be used alongside buttons or icons when a espec
 
 ## Stories
 
+<br />
+
 ### Sizes
+
+The size can be modified with the `size` property. Supported sizes are:
 
 export const Sizes = () => ({
   components: { SDot },
@@ -131,4 +137,25 @@ export const Sizes = () => ({
 
 ```html
 <s-dot ... size="mini" />
+```
+
+### Disabled
+
+A disabled state can be achieved when the `disabled` property is given.
+
+export const Disabled = () => ({
+  components: { SDot },
+  template: `<s-dot disabled />`
+});
+
+<br />
+
+<Story name='Disabled'>{Disabled.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-dot ... disabled />
 ```

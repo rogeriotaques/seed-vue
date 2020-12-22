@@ -1,5 +1,5 @@
 <template lang="pug">
-  span(:class="[`s-dot--${color}`, `s-dot--${size}`]").s-dot
+  span(:class="[`s-dot--${color}`, `s-dot--${size}`, { 's-dot--disabled': disabled }]").s-dot
 </template>
 
 <script lang="ts">
@@ -17,6 +17,11 @@ export default {
     size: {
       validator: (val) => null || Object.values(SIZES_NAMES).includes(val),
       default: 'default'
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 };
@@ -55,6 +60,11 @@ export default {
     border-radius: 16px;
     width: 16px;
     height: 16px;
+  }
+
+  &--disabled {
+    background-color: $c-grey;
+    box-shadow: $shadow-inset-short;
   }
 }
 </style>

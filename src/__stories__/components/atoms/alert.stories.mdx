@@ -19,22 +19,22 @@ export const All = () => ({
   components: { SAlert },
   template: `
     <div>
-      <s-alert color="primary">A primary alert box.</s-alert>
-      <s-alert color="secondary">A secondary alert box.</s-alert>
-      <s-alert color="red">A red alert box.</s-alert>
-      <s-alert color="orange">A orange alert box.</s-alert>
-      <s-alert color="green">A green alert box.</s-alert>
-      <s-alert color="blue">A blue alert box.</s-alert>
-      <s-alert color="purple">A purple alert box.</s-alert>
-      <s-alert color="grey-dark">A grey-dark alert box.</s-alert>
-      <s-alert color="black">A black alert box.</s-alert>
+      <s-alert color="primary">A <code>primary</code> alert box.</s-alert>
+      <s-alert color="secondary">A <code>secondary</code> alert box.</s-alert>
+      <s-alert color="red">A <code>red</code> alert box.</s-alert>
+      <s-alert color="orange">A <code>orange</code> alert box.</s-alert>
+      <s-alert color="green">A <code>green</code> alert box.</s-alert>
+      <s-alert color="blue">A <code>blue</code> alert box.</s-alert>
+      <s-alert color="purple">A <code>purple</code> alert box.</s-alert>
+      <s-alert color="grey-dark">A <code>grey-dark</code> alert box.</s-alert>
+      <s-alert color="black">A <code>black</code> alert box.</s-alert>
     </div>
   `
 });
 
 ## Alerts
 
-Contextual feedback messages for user actions.
+Contextual feedback messages for user actions. The following colors are supported:
 
 <br />
 
@@ -54,9 +54,11 @@ Contextual feedback messages for user actions.
 
 ## Stories
 
+<br />
+
 ### With title
 
-Alert boxes can also contain `titles`.
+Alert boxes can also contain `titles`. Here are some examples:
 
 export const WithTitle = () => ({
   components: { SAlert },
@@ -89,7 +91,9 @@ export const WithTitle = () => ({
 
 ### Dismissable
 
-When `dismissable` is given, the alert box will display a `close` button which will emit the `dismiss` event when clicked.
+When the `dismissable` property is given, the alert box will display a `close` button which will emit the `dismiss` event when clicked.
+
+Go ahead and click on the (x) close buttons to see it in action 👇
 
 export const Dismissable = () => ({
   components: { SAlert },
@@ -136,3 +140,5 @@ export const Dismissable = () => ({
 ```html
 <s-alert v-if="isOpen" dismissable @dismiss="isOpen = false"> ... </s-alert>
 ```
+
+💡 `isOpen` in the above example is a variable to be controlled by it's parent component.

@@ -54,10 +54,6 @@ export const All = () => ({
         <code>purple</code>
       </div>
       <div class="a-badge-wrapper">
-        <s-badge color="white">10</s-badge>
-        <code>white</code>
-      </div>
-      <div class="a-badge-wrapper">
         <s-badge color="grey-light">10</s-badge>
         <code>grey-light</code>
       </div>
@@ -73,13 +69,17 @@ export const All = () => ({
         <s-badge color="black">10</s-badge>
         <code>black</code>
       </div>
+      <div class="a-badge-wrapper">
+        <s-badge color="white">10</s-badge>
+        <code>white</code>
+      </div>
     </div>
   `
 });
 
 ## Badges
 
-A small count and labeling component.
+A small count and labeling component. The following colors are supported:
 
 <br />
 
@@ -99,7 +99,11 @@ A small count and labeling component.
 
 ## Stories
 
+<br />
+
 ### Sizes
+
+The size can be modified with the `size` property. Supported sizes are:
 
 export const Sizes = () => ({
   components: { SBadge },
@@ -134,6 +138,8 @@ export const Sizes = () => ({
 ```
 
 ### Disabled
+
+A disabled state can be achieved when the `disabled` property is given.
 
 export const Disabled = () => ({
   components: { SBadge },

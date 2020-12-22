@@ -4,10 +4,11 @@ import SAlert from 'components/atoms/alert.vue';
 import SBadge from 'components/atoms/badge.vue';
 import SDot from 'components/atoms/dot.vue';
 import SIcon from 'components/atoms/icon.vue';
+import SProgressBar from 'components/atoms/progressBar.vue';
+import SSpinner from 'components/atoms/spinner.vue';
 
 // import SButton from 'components/button.vue';
 // import SSpinner from 'components/spinner.vue';
-// import SProgressBar from 'components/progress-bar.vue';
 // import SInput from 'components/input.vue';
 
 const version = '0.1.0';
@@ -16,8 +17,10 @@ const components = {
   SAlert,
   SBadge,
   SDot,
-  SIcon
-  //, SButton, SSpinner, SProgressBar, SInput
+  SIcon,
+  SProgressBar,
+  SSpinner
+  //, SButton, SInput
 };
 
 const install: any = (Vue: any, config = {}): void => {

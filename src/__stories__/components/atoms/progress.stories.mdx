@@ -1,0 +1,179 @@
+import { Meta, Story, /*Canvas,*/ ArgsTable } from '@storybook/addon-docs/blocks';
+import SProgress from 'components/atoms/progress';
+
+<Meta title='Components/Progress' component={SProgress} />
+
+<style>{`
+    .a-progress-bar-container {
+      display: block;
+      width: 100%;
+    }
+   .a-progress-bar-wrapper {
+     display: block;
+     vertical-align: middle;
+     margin: 0 0 16px;
+   }
+   .a-progress-bar-wrapper > code {
+     display: block;
+     margin-top: 4px;
+     margin-left: 8px;
+   }
+`}</style>
+
+export const All = () => ({
+  components: { SProgress },
+  template: `
+    <div class="a-progress-bar-container">
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="primary" percentage="40" />
+        <code>primary</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="secondary" percentage="45" />
+        <code>secondary</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="red" percentage="50" />
+        <code>red</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="orange" percentage="55" />
+        <code>orange</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="green" percentage="60" />
+        <code>green</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="blue" percentage="65" />
+        <code>blue</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="purple" percentage="70" />
+        <code>purple</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="grey-light" percentage="75" />
+        <code>grey-light</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="grey" percentage="80" />
+        <code>grey</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="grey-dark" percentage="85" />
+        <code>grey-dark</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress color="black" percentage="90" />
+        <code>black</code>
+      </div>
+      <div class="a-progress-bar-wrapper" style="background: #333; color: white; padding-top: 16px;">
+        <s-progress color="white" percentage="95" />
+        <code>white</code>
+      </div>
+    </div>
+  `
+});
+
+## Progress
+
+Show the progress of operations or statuses. The following colors are supported:
+
+<br />
+
+<Story name='All'>{All.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-progress color="primary" percentage="40" />
+```
+
+<ArgsTable of={SProgress} />
+
+## Stories
+
+<br />
+
+### Sizes
+
+The size can be modified with the `size` property. Supported sizes are:
+
+export const Sizes = () => ({
+  components: { SProgress },
+  template: `
+    <div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress size="mini" color="primary" percentage="40" />
+        <code>mini</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress size="default" color="secondary" percentage="60" />
+        <code>default</code>
+      </div>
+      <div class="a-progress-bar-wrapper">
+        <s-progress size="large" color="red" percentage="80" />
+        <code>large</code>
+      </div>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Sizes'>{Sizes.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-progress ... size="mini" />
+```
+
+### Loop
+
+When the `infinite` property is given, the progress bar enters in a loop. In this mode, the percentage text is supressed.
+
+export const Speed = () => ({
+  components: { SProgress },
+  template: `<s-progress infinite />`
+});
+
+<br />
+
+<Story name='Speed'>{Speed.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-progress ... infinite />
+```
+
+### Without text
+
+When the progress percentage is not necessary, pass `hide-percentage` to omit it.
+
+export const Text = () => ({
+  components: { SProgress },
+  template: `<s-progress percentage="60" hide-percentage />`
+});
+
+<br />
+
+<Story name='Text'>{Text.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-progress ... percentage="60" hide-percentage />
+```

@@ -4,7 +4,7 @@ import SAlert from 'components/atoms/alert.vue';
 import SBadge from 'components/atoms/badge.vue';
 import SDot from 'components/atoms/dot.vue';
 import SIcon from 'components/atoms/icon.vue';
-import SProgressBar from 'components/atoms/progressBar.vue';
+import SProgress from 'components/atoms/progress.vue';
 import SSpinner from 'components/atoms/spinner.vue';
 
 // import SButton from 'components/button.vue';
@@ -18,7 +18,7 @@ const components = {
   SBadge,
   SDot,
   SIcon,
-  SProgressBar,
+  SProgress,
   SSpinner
   //, SButton, SInput
 };

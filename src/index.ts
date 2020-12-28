@@ -2,13 +2,12 @@ import * as helpers from './utils/helpers';
 
 import SAlert from 'components/atoms/alert.vue';
 import SBadge from 'components/atoms/badge.vue';
+import SButton from 'components/atoms/button.vue';
 import SDot from 'components/atoms/dot.vue';
 import SIcon from 'components/atoms/icon.vue';
 import SProgress from 'components/atoms/progress.vue';
 import SSpinner from 'components/atoms/spinner.vue';
 
-// import SButton from 'components/button.vue';
-// import SSpinner from 'components/spinner.vue';
 // import SInput from 'components/input.vue';
 
 const version = '0.1.0';
@@ -16,6 +15,7 @@ const version = '0.1.0';
 const components = {
   SAlert,
   SBadge,
+  SButton,
   SDot,
   SIcon,
   SProgress,

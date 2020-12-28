@@ -1,0 +1,356 @@
+import { Meta, Story, /*Canvas,*/ ArgsTable } from '@storybook/addon-docs/blocks';
+import SButton from 'components/atoms/button';
+import SIcon from 'components/atoms/icon';
+
+<Meta title='Components/Button' component={SButton} />
+
+<style>{`
+    .a-button-container {
+      width: 100%;
+    }
+    .a-button-container .s-button {
+      margin: 8px 4px;
+    }
+    .a-white-wrapper {
+      display: inline-block;
+      background-color: #333;
+      padding: 0 8px;
+    }
+`}</style>
+
+export const All = () => ({
+  components: { SButton },
+  template: `
+    <div class="a-button-container">
+      <s-button color="primary" >
+        primary
+      </s-button>
+      <s-button color="secondary" >
+        secondary
+      </s-button>
+      <s-button color="red" >
+        red
+      </s-button>
+      <s-button color="orange" >
+        orange
+      </s-button>
+      <s-button color="green" >
+        green
+      </s-button>
+      <s-button color="blue" >
+        blue
+      </s-button>
+      <s-button color="purple" >
+        purple
+      </s-button>
+      <s-button color="grey-light" >
+        grey-light
+      </s-button>
+      <s-button color="grey" >
+        grey
+      </s-button>
+      <s-button color="grey-dark" >
+        grey-dark
+      </s-button>
+      <s-button color="black" >
+        black
+      </s-button>
+      <s-button color="white" >
+        white
+      </s-button>
+    </div>
+  `
+});
+
+## Buttons
+
+The classic button. In different colors, sizes, and states. The following colors are supported:
+
+<br />
+
+<Story name='All'>{All.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-button color="primary"> ... </s-button>
+```
+
+<ArgsTable of={SButton} />
+
+## Stories
+
+<br />
+
+### Sizes
+
+The size can be modified with the `size` property. Supported sizes are:
+
+export const Sizes = () => ({
+  components: { SButton },
+  template: `
+    <div class="a-button-container">
+      <s-button size="mini">mini</s-button>
+      <s-button size="default">default</s-button>
+      <s-button size="large">large</s-button>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Sizes'>{Sizes.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-button ... size="mini"> ... </s-button>
+```
+
+### Outline
+
+A outline state can be achieved when the `outline` property is given. All supported colors can be outlined.
+
+export const Outline = () => ({
+  components: { SButton },
+  template: `
+    <div class="a-button-container">
+      <s-button color="primary" outline>
+        primary
+      </s-button>
+      <s-button color="secondary" outline>
+        secondary
+      </s-button>
+      <s-button color="red" outline>
+        red
+      </s-button>
+      <s-button color="orange" outline>
+        orange
+      </s-button>
+      <s-button color="green" outline>
+        green
+      </s-button>
+      <s-button color="blue" outline>
+        blue
+      </s-button>
+      <s-button color="purple" outline>
+        purple
+      </s-button>
+      <s-button color="grey-light" outline>
+        grey-light
+      </s-button>
+      <s-button color="grey" outline>
+        grey
+      </s-button>
+      <s-button color="grey-dark" outline>
+        grey-dark
+      </s-button>
+      <s-button color="black" outline>
+        black
+      </s-button>
+      <div class="a-white-wrapper">
+        <s-button color="white" outline>
+          white
+        </s-button>
+      </div>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Outline'>{Outline.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-button ... color="primary" outline> ... </s-button>
+```
+
+### Round
+
+A rounded button can be achieved when the `round` property is given.
+
+export const Round = () => ({
+  components: { SButton },
+  template: `
+    <div class="a-button-container">
+      <s-button size="mini" round>mini</s-button>
+      <s-button size="default" round>default</s-button>
+      <s-button size="large" round>large</s-button>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Round'>{Round.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-button ... round> ... </s-button>
+```
+
+### Loading
+
+A loading state can be achieved when the `loading` property is given.
+
+export const Loading = () => ({
+  components: { SButton },
+  template: `
+    <div class="a-button-container">
+      <s-button color="primary" loading>
+        primary
+      </s-button>
+      <s-button color="secondary" loading>
+        secondary
+      </s-button>
+      <s-button color="red" loading>
+        red
+      </s-button>
+      <s-button color="orange" loading>
+        orange
+      </s-button>
+      <s-button color="green" loading>
+        green
+      </s-button>
+      <s-button color="blue" loading>
+        blue
+      </s-button>
+      <s-button color="purple" loading>
+        purple
+      </s-button>
+      <s-button color="grey-light" loading>
+        grey-light
+      </s-button>
+      <s-button color="grey" loading>
+        grey
+      </s-button>
+      <s-button color="grey-dark" loading>
+        grey-dark
+      </s-button>
+      <s-button color="black" loading>
+        black
+      </s-button>
+      <s-button color="white" loading>
+        white
+      </s-button>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Loading'>{Loading.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-button ... loading> ... </s-button>
+```
+
+### Icon
+
+Buttons can be icon only by passing the `icon` property.
+
+export const Icon = () => ({
+  components: { SButton, SIcon },
+  template: `
+    <div class="a-button-container">
+      <s-button size="mini" icon>
+        <s-icon name="github" />
+      </s-button>
+      <s-button size="default" icon>
+        <s-icon name="github" />
+      </s-button>
+      <s-button size="large" icon>
+        <s-icon name="github" />
+      </s-button>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Icon'>{Icon.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-button ... icon> ... </s-button>
+```
+
+### Disabled
+
+A disabled state can be achieved when the `disabled` property is given.
+
+export const Disabled = () => ({
+  components: { SButton },
+  template: `
+    <div class="a-button-container">
+      <s-button color="primary" disabled>
+        primary
+      </s-button>
+      <s-button color="secondary" disabled>
+        secondary
+      </s-button>
+      <s-button color="red" disabled>
+        red
+      </s-button>
+      <s-button color="orange" disabled>
+        orange
+      </s-button>
+      <s-button color="green" disabled>
+        green
+      </s-button>
+      <s-button color="blue" disabled>
+        blue
+      </s-button>
+      <s-button color="purple" disabled>
+        purple
+      </s-button>
+      <s-button color="grey-light" disabled>
+        grey-light
+      </s-button>
+      <s-button color="grey" disabled>
+        grey
+      </s-button>
+      <s-button color="grey-dark" disabled>
+        grey-dark
+      </s-button>
+      <s-button color="black" disabled>
+        black
+      </s-button>
+      <s-button color="white" disabled>
+        white
+      </s-button>
+    </div>
+  `
+});
+
+<br />
+
+<Story name='Disabled'>{Disabled.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-button ... disabled> ... </s-button>
+```

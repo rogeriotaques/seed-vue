@@ -15,5 +15,13 @@ export const parameters = {
 
   docs: {
     theme: seedVueTheme
+  },
+
+  options: {
+    storySort: {
+      method: 'alphabetical',
+      order: ['Introduction', 'Get Started', 'Components'],
+      locales: ''
+    }
   }
 };

@@ -15,7 +15,7 @@
     "lint": "eslint ./src --ext .ts,.js --no-error-on-unmatched-pattern",
     "unit": "jest",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "storybook:build": "build-storybook"
+    "storybook:build": "rm -rf ./docs && build-storybook --docs -o ./docs"
   },
   "author": "Rogerio Taques",
   "license": "MIT",

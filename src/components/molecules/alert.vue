@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { COLORS_NAMES } from 'utils/constants';
-import SIcon from './icon.vue';
+import SIcon from 'components/atoms/icon.vue';
 
 const COLORS_TO_IGNORE = [COLORS_NAMES.WHITE, COLORS_NAMES.SOFT_GREY, COLORS_NAMES.GREY];
 const FILTERED_COLORS_NAMES = Object.values(COLORS_NAMES).filter((name) => !COLORS_TO_IGNORE.some((n) => n === name));

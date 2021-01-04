@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { COLORS_NAMES, SIZES_NAMES } from 'utils/constants';
-import SSpinner from './spinner';
+import SSpinner from 'components/atoms/spinner';
 
 export default {
   name: 'SButton',

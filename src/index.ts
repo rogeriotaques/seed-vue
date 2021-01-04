@@ -1,8 +1,8 @@
 import * as helpers from './utils/helpers';
 
-import Alert from 'components/atoms/alert.vue';
+import Alert from 'components/molecules/alert.vue';
 import Badge from 'components/atoms/badge.vue';
-import Button from 'components/atoms/button.vue';
+import Button from 'components/molecules/button.vue';
 import Dot from 'components/atoms/dot.vue';
 import Icon from 'components/atoms/icon.vue';
 import Progress from 'components/atoms/progress.vue';

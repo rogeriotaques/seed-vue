@@ -1,7 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 
-import SeedLogo from './assets/images/seed-logo.png';
-import VueLogo from './assets/images/vue-logo.png';
+import SeedVueLogo from './assets/images/logo-seed-vue.png';
 
 <Meta title='Introduction' />
 
@@ -11,7 +10,7 @@ import VueLogo from './assets/images/vue-logo.png';
     --c-secondary: #41b883;
     --c-dark: #666;
 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans Condensed', 'Open Sans', Helvetica, Arial, sans-serif;
     line-height: 1.35;
   }
 
@@ -48,7 +47,7 @@ import VueLogo from './assets/images/vue-logo.png';
   }
 
   .logos__seed > img, .logos__vue > img {
-    max-width: 96px;
+    max-width: 350px;
   }
 
   .seed-vue__title {
@@ -80,18 +79,18 @@ import VueLogo from './assets/images/vue-logo.png';
     color: var(--c-dark);
     text-align: center;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `}</style>
 
 <header>
   <div class='logos'>
     <div class='logos__seed'>
-      <img src={SeedLogo} alt='Seed' />
-    </div>
-    <div class='logos__vue'>
-      <img src={VueLogo} alt='Vue.js' />
+      <img src={SeedVueLogo} alt='Seed-Vue' />
     </div>
   </div>
-  <h1 class='seed-vue__title'>SEED-VUE</h1>
   <h2 class='seed-vue__subtitle'>
     A Vue 2 based component library
     <br />
@@ -100,6 +99,9 @@ import VueLogo from './assets/images/vue-logo.png';
   <p class='seed-vue__intro'>It's free, open-source, light-weight and responsive</p>
   <p class='seed-vue__copyright'>
     Made with 💚 in Tokyo. <br />
-    &copy; 2020. Rogerio Taques
+    &copy; 2020.&nbsp;
+    <a href='https://twitter.com/rogeriotaques' target='_blank' rel='noopener'>
+      Rogerio Taques
+    </a>
   </p>
 </header>

@@ -56,7 +56,7 @@ $s-spinner-dimension: 24px;
     content: '';
     display: inline-block;
     vertical-align: middle;
-    border: $s-spinner-gutter solid $c-border;
+    border: $s-spinner-gutter solid $c-spinner-bg;
     border-radius: 50%;
     width: $s-spinner-dimension;
     height: $s-spinner-dimension;
@@ -64,9 +64,7 @@ $s-spinner-dimension: 24px;
 
   @each $colorName, $colorCode in $colors {
     &--#{$colorName}::before {
-      @if $colorName == 'grey-light' {
-        border-color: #f9f9f9;
-      } @else if $colorName == 'white' {
+      @if $colorName == 'white' {
         border-color: $c-grey-dark;
       }
 

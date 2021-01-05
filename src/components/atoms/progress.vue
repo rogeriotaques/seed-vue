@@ -70,7 +70,7 @@ $s-progress-height: 24px;
   position: relative;
   border: 0;
   border-radius: 12px;
-  background-color: $c-border;
+  background-color: $c-spinner-bg;
   height: $s-progress-height;
   box-sizing: border-box;
   font-size: 0;

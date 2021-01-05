@@ -1,0 +1,294 @@
+import { Meta, Story, /*Canvas,*/ ArgsTable } from '@storybook/addon-docs/blocks';
+import SInput from 'components/molecules/input';
+
+<Meta title='Components/Input' component={SInput} />
+
+<style>{`
+   .m-input-wrapper {
+     display: block;
+     margin-bottom: 8px;
+   }
+   .m-input-wrapper > code {
+     display: block;
+     margin-top: 8px;
+     padding: 0 8px;
+   }
+`}</style>
+
+export const All = () => ({
+  components: { SInput },
+  template: `
+    <div>
+      <s-input v-model="value" type="text" name="example1" placeholder="E.g: John Doe" required />
+      <s-input v-model="value" type="text" name="example2" placeholder="E.g: John Doe" required>
+        <span slot="label">Name</span>
+      </s-input>
+      <s-input v-model="value" type="text" name="example3" required>
+        <span slot="label">Name</span>
+        <span slot="help">E.g: John Doe.</span>
+      </s-input>
+      <s-input v-model="value" type="text" name="example4" placeholder="E.g: John Doe.">
+        <span slot="label">Name</span>
+      </s-input>
+      <s-input v-model="value" type="text" name="example5" required placeholder="E.g: John Doe." has-feedback="invalid">
+        <span slot="label">Name</span>
+        <span slot="feedback">Name should be, at least, 4 characters longer.</span>
+      </s-input>
+      <s-input v-model="value" type="text" name="example6" required placeholder="E.g: John Doe." has-feedback="missing">
+        <span slot="label">Name</span>
+        <span slot="feedback">Name is required.</span>
+      </s-input>
+      <s-input v-model="value" type="text" name="example7" required placeholder="E.g: John Doe." has-feedback="success">
+        <span slot="label">Name</span>
+        <span slot="feedback">Your name looks perfect! 🎉.</span>
+      </s-input>
+    </div>
+  `,
+  data: () => ({
+    value: ''
+  })
+});
+
+## Inputs
+
+The basic HTML5 Input Element with steroids. All native attributes are supported alongside a few others.
+
+<br />
+
+<Story name='All'>{All.bind({})}</Story>
+
+<p>
+  <br />
+</p>
+
+##### Usage:
+
+```html
+<s-input v-model="value" ... />
+```
+
+<ArgsTable of={SInput} />
+
+## Stories
+
+<br />
+
+### With label
+
+A built in label can be shown with the `label` slot.
+
+When `required` is not given to a labeled input, it will also show the `optional marker` **(optional)**.
+
+export const WithLabel = () => ({
+  components: { SInput },
+  template: `
+    <div >
+      <s-input v-model="value" type="text" name="example1" placeholder="E.g: John Doe" required>
+        <span slot="label">Name</span>
+      </s-input>
+      <s-input v-model="value" type="text" name="example2" placeholder="E.g: John Doe">
+        <span slot="label">Name</span>
+      </s-input>
+    </div>
+  `,
+  data: () => ({
+    value: ''
+  })
+});
+
+<br />
+
+<Story name='With label'>{WithLabel.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<!-- REQUIRED INPUTS -->
+
+<s-input v-model="value" required ...>
+  <span slot="label">Name</span>
+</s-input>
+
+<!-- OR OPTIONAL INPUTS -->
+
+<s-input v-model="value" ...>
+  <span slot="label">Name</span>
+</s-input>
+```
+
+### Validation states
+
+The validation state is represented by a pre-defined border color and icon (on the right).
+
+It's enabled when `has-feedback` attribute is given with one of the 3 supported validation states:
+
+- `missing`, for required inputs, not filled
+- `invalid`, for invalid input contents
+- `success`, for valid contents
+
+A custom validation message can be given with the `feedback` slot.
+
+export const WithValidationStates = () => ({
+  components: { SInput },
+  template: `
+    <div >
+      <s-input type="text" name="example1" v-model="value1" required has-feedback="missing">
+        <span slot="label">Name</span>
+        <span slot="feedback">Please inform your name.</span>
+      </s-input>
+      <s-input type="text" name="example2" v-model="value2" required has-feedback="invalid">
+        <span slot="label">Name</span>
+        <span slot="feedback">Name should be, at least, 4 characters longer.</span>
+      </s-input>
+      <s-input type="text" name="example3" v-model="value3" required has-feedback="success">
+        <span slot="label">Name</span>
+        <span slot="feedback">Thank you! 🙇‍♂️.</span>
+      </s-input>
+    </div>
+  `,
+  data: () => ({
+    value1: '',
+    value2: 'Foo',
+    value3: 'John Doe'
+  })
+});
+
+<br />
+
+<Story name='Validation states'>{WithValidationStates.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-input v-model="value" required has-feedback="missing" ...>
+  <span slot="feedback">Your custom feedback message!</span>
+</s-input>
+```
+
+💡 _This component does not provide any sort of validation method!_
+
+### Custom optional marker
+
+By default, when not required, `input` will show an **(optional)** text on labeled fields.
+
+That marker can be customized with the `optionalMarker` slot.
+
+export const WithCustomOptionalMarker = () => ({
+  components: { SInput },
+  template: `
+    <s-input type="text" name="example1" v-model="value1">
+      <span slot="label">Name</span>
+      <span slot="optionalMarker">🚨 HEADS-UP! THIS IS OPTIONAL! 😅</span>
+    </s-input>
+  `,
+  data: () => ({
+    value1: ''
+  })
+});
+
+<br />
+
+<Story name='Custom optional marker'>{WithCustomOptionalMarker.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-input v-model="value" ...>
+  <span slot="optionalMarker">(optional)</span>
+</s-input>
+```
+
+### Sizes
+
+The size can be modified with the `size` attribute. Supported sizes are:
+
+export const Sizes = () => ({
+  components: { SInput },
+  template: `
+    <div >
+      <s-input type="text" name="example1" v-model="value1" size="mini">
+        <span slot="label">Name</span>
+        <span slot="help">mini</span>
+      </s-input>
+      <s-input type="text" name="example1" v-model="value1">
+        <span slot="label">Name</span>
+        <span slot="help">default</span>
+      </s-input>
+      <s-input type="text" name="example1" v-model="value1" size="large">
+        <span slot="label">Name</span>
+        <span slot="help">large</span>
+      </s-input>
+    </div>
+  `,
+  data: () => ({
+    value1: ''
+  })
+});
+
+<br />
+
+<Story name='Sizes'>{Sizes.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-input v-model="value" size="default" ... />
+```
+
+### Types
+
+The input type can be modified with the `type` attribute. Supported types are:
+
+export const Types = () => ({
+  components: { SInput },
+  template: `
+    <div >
+      <s-input type="text" name="example1" v-model="value1">
+        <span slot="help">text</span>
+      </s-input>
+      <s-input type="search" name="example2" v-model="value2" @clear="value2=''">
+        <span slot="help">search</span>
+      </s-input>
+      <s-input type="url" name="example3" v-model="value3">
+        <span slot="help">url</span>
+      </s-input>
+      <s-input type="email" name="example4" v-model="value4">
+        <span slot="help">email</span>
+      </s-input>
+      <s-input type="tel" name="example5" v-model="value5">
+        <span slot="help">tel</span>
+      </s-input>
+      <s-input type="password" name="example6" v-model="value6">
+        <span slot="help">password</span>
+      </s-input>
+    </div>
+  `,
+  data: () => ({
+    value1: 'The cat has jumped into the water!',
+    value2: 'Not a google search, yet!',
+    value3: 'github.com',
+    value4: 'john@doe.com',
+    value5: '0123456789',
+    value6: 'The cat has jumped into the water!'
+  })
+});
+
+<br />
+
+<Story name='Types'>{Types.bind({})}</Story>
+
+<br />
+
+##### Usage:
+
+```html
+<s-input v-model="value" type="search" ... />
+```

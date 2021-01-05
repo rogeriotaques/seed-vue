@@ -5,6 +5,7 @@ import Badge from 'components/atoms/badge.vue';
 import Button from 'components/molecules/button.vue';
 import Dot from 'components/atoms/dot.vue';
 import Icon from 'components/atoms/icon.vue';
+import Input from 'components/molecules/input.vue';
 import Progress from 'components/atoms/progress.vue';
 import Spinner from 'components/atoms/spinner.vue';
 
@@ -19,8 +20,8 @@ const components = {
   Dot,
   Icon,
   Progress,
-  Spinner
-  //, Input
+  Spinner,
+  Input
 };
 
 const install: any = (Vue: any, config = {}): void => {

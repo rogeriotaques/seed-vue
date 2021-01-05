@@ -18,3 +18,22 @@ export enum SIZES_NAMES {
   DEFAULT = 'default',
   LARGE = 'large'
 }
+
+export enum INPUT_TYPES {
+  TEXT = 'text',
+  SEARCH = 'search',
+  URL = 'url',
+  EMAIL = 'email',
+  TEL = 'tel',
+  PASSWORD = 'password'
+  // RANGE = 'range',
+  // RADIO = 'radio',
+  // CHECKBOX = 'checkbox'
+}
+
+export enum INPUT_FEEDBACKS {
+  NONE = '',
+  MISSING = 'missing',
+  INVALID = 'invalid',
+  SUCCESS = 'success'
+}

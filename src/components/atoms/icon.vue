@@ -1,5 +1,8 @@
 <template lang="pug">
-  span(:class="[`s-icon--${color}`, {'eva-parent-hover': animation && !infinite}]").s-icon
+  span(
+    :class="[`s-icon--${color}`, {'eva-parent-hover': animation && !infinite}]"
+    @click="$emit('click', $event)"
+  ).s-icon
     i(
       :class="[`eva-${name}${style}`, { 'eva-animation': animation, 'eva-infinite': infinite }, animationClassName, sizeClassName]"
     ).eva

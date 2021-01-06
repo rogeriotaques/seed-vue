@@ -21,6 +21,6 @@ export default create({
   textInverseColor: '#f2f2f2',
 
   brandTitle: 'SEED-VUE Storybook',
-  brandImage: 'https://raw.githubusercontent.com/rogeriotaques/seed-vue/master/src/__stories__/assets/images/logo-seed.png',
+  brandImage: 'https://raw.githubusercontent.com/rogeriotaques/seed-vue/master/src/__stories__/assets/images/logo-seed-vue.png',
   brandUrl: 'https://rogeriotaques.github.io/seed-vue'
 });

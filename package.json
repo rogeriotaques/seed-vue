@@ -1,7 +1,7 @@
 {
   "name": "seed-vue",
-  "version": "0.1.0",
-  "description": "Responsive Vue components based on Seed-CSS.",
+  "version": "0.1.1",
+  "description": "A Vue2 based component library. Lightweight, responsible, and open-source.",
   "main": "dist/index.js",
   "style": "dist/index.css",
   "typings": "types.d.ts",
@@ -37,7 +37,6 @@
   ],
   "dependencies": {
     "eva-icons": "^1.1.3",
-    "seed-css": "^2.5.1",
     "vue": "^2.6.12"
   },
   "peerDependencies": {

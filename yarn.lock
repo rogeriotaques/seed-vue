@@ -11788,11 +11788,6 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-seed-css@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/seed-css/-/seed-css-2.5.1.tgz#e68a06b16e1cb1d656325dd63d54ea06e44462f9"
-  integrity sha512-4329YliL84iXibb7GXQp1A7mRheMG7lMxBZGs/uqj1eVxsZqB+Igc3DGhVaYziArsf0lewXV19Hn8Ch95NAQiw==
-
 select@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"

@@ -1,0 +1,8 @@
+{
+  "relativeUrls": true,
+  "includePaths": [
+    "./node_modules",
+    "./src",
+    "./src/styles"
+  ]
+}

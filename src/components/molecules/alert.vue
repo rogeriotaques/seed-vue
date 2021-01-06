@@ -46,7 +46,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'eva-icons/style/eva-icons.css';
 @import 'styles/transitions';
 @import 'styles/typography';
 @import 'styles/colors';

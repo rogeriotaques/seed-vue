@@ -1,4 +1,5 @@
-import * as helpers from './utils/helpers';
+import * as pkg from '../package.json';
+import * as helpers from 'utils/helpers';
 
 import Alert from 'components/molecules/alert.vue';
 import Badge from 'components/atoms/badge.vue';
@@ -9,9 +10,7 @@ import Input from 'components/molecules/input.vue';
 import Progress from 'components/atoms/progress.vue';
 import Spinner from 'components/atoms/spinner.vue';
 
-// import SInput from 'components/input.vue';
-
-const version = '0.1.0';
+const version = pkg.version;
 
 const components = {
   Alert,

@@ -9,7 +9,6 @@
 </template>
 
 <script lang="ts">
-import 'eva-icons/style/eva-icons.css';
 import { COLORS_NAMES } from 'utils/constants';
 
 const EVA_ANIMATIONS = ['zoom', 'pulse', 'shake', 'flip'];

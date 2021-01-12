@@ -65,7 +65,8 @@ Import to start using it.
 // e.g main.js or main.ts
 
 import Vue from 'vue';
-import SeedVue from 'seed-vue';
+import SeedVue from 'seed-vue'; // the components
+import 'seed-vue/dist/index.css'; // the styles
 import App from './YourApp.vue';
 
 Vue.use(SeedVue);

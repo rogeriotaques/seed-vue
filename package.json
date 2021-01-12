@@ -1,6 +1,6 @@
 {
   "name": "seed-vue",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Vue2 based component library. Lightweight, responsible, and open-source.",
   "main": "dist/index.js",
   "style": "dist/index.css",

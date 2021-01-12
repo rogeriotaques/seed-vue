@@ -4,12 +4,12 @@
 
 <p align="center">
   <strong>
-    A VUE 2 BASED COMPONENT LIBRARY<br />FOR BEAUTIFUL AND RESPONSIVE APPS
+    A VUE2 BASED COMPONENT LIBRARY
   </strong>
 </p>
 
 <p align="center">
-  IT'S FREE, OPEN-SOURCE, LIGHT-WEIGHT AND RESPONSIVE
+  LIGHTWEIGHT, RESPONSIBLE, AND OPEN-SOURCE
 </p>
 <p align="center">
   <a href="https://rogeriotaques.github.io/seed-vue">
@@ -47,10 +47,16 @@
 
 > 💡 This is a very quick start guide. Check the [docs](https://rogeriotaques.github.io/seed-vue/?path=/docs/quick-start--page) for the detailed version.
 
-Install via `Yarn` or `NPM`.
+Install via `Yarn`
 
 ```sh
 $ yarn add seed-vue
+```
+
+or `NPM`
+
+```sh
+$ npm install seed-vue
 ```
 
 Import to start using it.

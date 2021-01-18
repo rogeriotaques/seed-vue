@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  LIGHTWEIGHT, RESPONSIBLE, AND OPEN-SOURCE
+  LIGHTWEIGHT, RESPONSIVE, AND OPEN-SOURCE
 </p>
 <p align="center">
   <a href="https://rogeriotaques.github.io/seed-vue">
